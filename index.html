@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    
+    <div class="container">
+
+        <div class="inputName">
+            <label for="inputName">Enter Your Name</label>
+
+            <input type="text" placeholder="Full Name" id="inputName" style=" width: 200px; border: none; float: right;">
+
+        </div>
+        <div class="inputEmail">
+            <label for="inputEmail">Enter Your Email</label>
+            <input type="email" id="inputEmail" placeholder="Email" style=" width: 200px; border: none;float: right;">
+
+        </div>
+
+        <div class="inputDob">
+            <label for="inputDob">Enter Your DOB</label>
+            <input type="date"  id="DOB" value="2014-02-09" style=" width: 200px; border: none; float: right;"></input>
+
+        </div>
+        <div class="inputEducation">
+            <label for="inputEducation">Year of Education</label>
+            <select name="inputEducation" id="EDU" style=" width: 200px; border: none; float: right;">
+                <option value="Metric">Metric</option>
+                <option value="FSc">FSc</option>
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Graduate">Graduate</option>
+                <option value="Master">Master</option>
+            
+        </select>
+
+        </div>
+
+        <div class="btn">
+            <button id="submit">Submit</button>
+            
+
+        </div>
+
+
+        <tr>
+            <div class="data">
+
+                
+
+                <p id="pname"></p>
+                <p id="pemail"></p>
+                <p id="pdob"></p>
+                <p id="pedu"></p>
+
+
+            </div>
+        </tr>
+
+
+        <script>
+            var submit =document.getElementById('submit');
+            submit.addEventListener('click', displayData);
+
+            function displayData(){
+                var name=document.getElementById('inputName').value;
+                document.getElementById("pname").innerHTML=name;
+                var email=document.getElementById('inputEmail').value;
+                document.getElementById("pemail").innerHTML=email;
+                var dob=document.getElementById("DOB").value;
+                document.getElementById("pdob").innerHTML=dob;
+                var Education=document.getElementById('EDU').value;
+                document.getElementById("pedu").innerHTML=Education;
+                
+
+
+                if(!name || !email || !dob || !Education){
+                    alert("Please fill complete data first");
+                   
+                }
+               
+
+               
+             }
+            
+         
+
+
+            
+        </script>
+
+
+
+
+
+    </div>
+</body>
+</html>
